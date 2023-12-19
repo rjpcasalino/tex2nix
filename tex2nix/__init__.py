@@ -13,7 +13,7 @@ def get_nix_packages() -> Set[str]:
     res = subprocess.run(
         [
             "nix",
-            "-I=nixpkgs=../nixpkgs"
+            "-I=nixpkgs=../nixpkgs",
             "--experimental-features",
             "nix-command flakes",
             "eval",
