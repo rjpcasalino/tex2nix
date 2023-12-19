@@ -18,7 +18,7 @@ def get_nix_packages() -> Set[str]:
             "eval",
             "--json",
             "-f",
-            "<nixpkgs>",
+            "nixpkgs",
             "texlive",
             "--apply",
             "builtins.attrNames",
